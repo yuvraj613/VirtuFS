@@ -1,5 +1,21 @@
+# Node-related
 node_modules/
-*.exe
+package-lock.json
+
+# Electron build output (optional)
+dist/
+build/
 *.log
-.vscode/
+
+# C++ build files
+*.exe
+*.out
+*.obj
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Input/output simulation files (optional)
+backend/input.txt
+backend/output.txt

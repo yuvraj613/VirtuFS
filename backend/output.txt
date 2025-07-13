@@ -1,5 +1,5 @@
 > cd booksmkdir parent
-Directory not found: booksmkdir
+Directory not found: booksmkdir parent
 
 Current File System:
 |-- root
@@ -18,4 +18,341 @@ Current File System:
 |-- root
   |-- harryPotter
   |-- parent
+-----------------------------
+> mkdir books
+Directory created: books
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- parent
+-----------------------------
+> mkdir hello
+Directory created: hello
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+-----------------------------
+> cd..
+Unknown command: cd..
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+-----------------------------
+> ls
+books
+harryPotter
+hello
+parent
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+-----------------------------
+> mkdir root#1
+Directory created: root#1
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> cd root#1
+Changed directory to: root#1
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> rm root#1
+Error: 'root#1' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> rm "root#1"
+Error: '"root#1"' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> mkdir new
+Directory created: new
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd..
+Unknown command: cd..
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm root#1
+Error: 'root#1' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd books
+Directory not found: books
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm books
+Error: 'books' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd root#1
+Directory not found: root#1
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd root#1
+Directory not found: root#1
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd..
+Unknown command: cd..
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm root
+Error: 'root' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd hello
+Directory not found: hello
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd ..
+Moved to parent directory.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd books
+Changed directory to: books
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm books
+Error: 'books' not found.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd ..
+Moved to parent directory.
+
+Current File System:
+|-- root
+  |-- books
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm books
+Deleted: books
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm root#1
+Error: Directory 'root#1' is not empty.
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> cd root#1
+Changed directory to: root#1
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+    |-- new
+-----------------------------
+> rm new
+Deleted: new
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> cd ..
+Moved to parent directory.
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+  |-- root#1
+-----------------------------
+> rm root#1
+Deleted: root#1
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+  |-- parent
+-----------------------------
+> rm parent
+Deleted: parent
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- hello
+-----------------------------
+> rm hello
+Deleted: hello
+
+Current File System:
+|-- root
+  |-- harryPotter
+-----------------------------
+> rm harryPotter
+Deleted: harryPotter
+
+Current File System:
+|-- root
 -----------------------------

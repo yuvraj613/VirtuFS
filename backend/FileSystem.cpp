@@ -61,6 +61,25 @@ void FileSystem::pwd() const {
     std::cout << path << std::endl;
 }
 
+void FileSystem::rm(const std::string& name) {
+    auto it = current->children.find(name);
+    if (it == current->children.end()) {
+        std::cout << "Error: '" << name << "' not found.\n";
+        return;
+    }
+
+    Node* target = it->second;
+
+    if (!target->children.empty()) {
+        std::cout << "Error: Directory '" << name << "' is not empty.\n";
+        return;
+    }
+
+    delete target;
+    current->children.erase(it);
+    std::cout << "Deleted: " << name << std::endl;
+}
+
 void FileSystem::printTree(Node* node, int level) const {
     if (!node) node = root;
 
@@ -74,15 +93,24 @@ void FileSystem::printTree(Node* node, int level) const {
 
 void FileSystem::processCommand(const std::string& command) {
     std::istringstream iss(command);
-    std::string cmd, arg;
+    std::string cmd;
     iss >> cmd;
 
+    std::string arg;
+    std::getline(iss, arg);
+
+    // Trim leading/trailing whitespace
+    arg.erase(0, arg.find_first_not_of(" \t\r\n"));
+    arg.erase(arg.find_last_not_of(" \t\r\n") + 1);
+
     if (cmd == "mkdir") {
-        iss >> arg;
         mkdir(arg);
     } else if (cmd == "cd") {
-        iss >> arg;
         cd(arg);
+    } else if (cmd == "touch") {
+        mkdir(arg); // Simulate files as directories or adjust as needed
+    } else if (cmd == "rm") {
+        rm(arg);
     } else if (cmd == "ls") {
         ls();
     } else if (cmd == "pwd") {

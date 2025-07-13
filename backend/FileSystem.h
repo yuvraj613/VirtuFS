@@ -30,6 +30,9 @@ public:
     void pwd() const;
     void printTree(Node* node = nullptr, int level = 0) const;
     void processCommand(const std::string& command);
+
+    // ✅ Add this line:
+    void rm(const std::string& name);
 };
 
 #endif
