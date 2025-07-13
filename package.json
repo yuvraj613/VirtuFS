@@ -1,0 +1,14 @@
+{
+  "name": "file-system-simulator",
+  "version": "1.0.0",
+  "description": "A simple file system simulator using C++ backend and Electron frontend",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Yuvraj",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.3.1"
+  }
+}

@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+pre {
+  background-color: #222;
+  color: #0f0;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}

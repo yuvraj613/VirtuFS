@@ -1,0 +1,21 @@
+> cd booksmkdir parent
+Directory not found: booksmkdir
+
+Current File System:
+|-- root
+-----------------------------
+> mkdir parent
+Directory created: parent
+
+Current File System:
+|-- root
+  |-- parent
+-----------------------------
+> mkdir harryPotter
+Directory created: harryPotter
+
+Current File System:
+|-- root
+  |-- harryPotter
+  |-- parent
+-----------------------------

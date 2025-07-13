@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>📁 File System Simulator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 2rem;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      #commandInput {
+        width: 70%;
+        padding: 10px;
+        font-size: 1rem;
+        margin-right: 10px;
+      }
+
+      #runBtn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      #runBtn:hover {
+        background-color: #45a049;
+      }
+
+      #output {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        white-space: pre-wrap;
+        font-family: "Courier New", monospace;
+        height: 300px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📁 File System Simulator</h1>
+
+    <div style="text-align: center">
+      <input
+        id="commandInput"
+        placeholder="Type your command here (e.g., mkdir books)"
+      />
+      <button id="runBtn">Run</button>
+    </div>
+
+    <pre id="output"></pre>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
